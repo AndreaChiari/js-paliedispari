@@ -22,27 +22,35 @@ if(!isNaN(input)){
 // Creo una prima funzione per verificare il senso di una parola
 
 //DICHIARAZIONE
-function palindromefirst(word){
- for(i=0; i < word.length; i++)
- console.log(word);
- return word;
+ function verifyWord(word){
+    
+    for(i=0; i < word.length; i++)
+    console.log(word);
+    return word;
 }
+    
 
  //INVOCAZIONE
-palindromefirst('Anna');
+ verifyWord(input.length);
 
 // Creo una seconda funzione per verificare il senso di una parola
 
 //DICHIARAZIONE
-function reverseword(reverseword){
-    for(let i = reverseword.length -1;  i >= 0 ; i--)
-    result += reverseword[i];
-    console.log(reverseword[i]);
-    return reverseword;
+function verifyReverse(wordReverse){
+    
+    for(let i = wordReverse.length -1;  i >= 0 ; i--)
+    console.log(wordReverse);
+    return wordReverse;
 }
+    
 
 //INVOCAZIONE 
-reverseword('Marco');
+verifyReverse(input.length);
 
     
+//Applico una condizionale che dimostri l'uguaglianza della parola sia normale che al contrario tra le due funzioni 
+if(verifyWord(input.length) === verifyReverse(input.length)){
+    alert('la parola è palindroma!');
+}
+
 });
