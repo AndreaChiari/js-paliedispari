@@ -14,46 +14,44 @@ button.addEventListener("click", function(){
     input = document.getElementById("input").value;
     console.log(input);
 
-// Validazione     
-if(!isNaN(input)){
-    alert("inserire solo parole!");
-}
+    // Validazione     
+    if(!isNaN(input)){
+        alert("inserire solo parole!");
+    }
     
-// Creo una prima funzione per verificare il senso di una parola
-
-//DICHIARAZIONE
- function verifyWord(word){
-    
-    for(i=0; i < word.length; i++)
-    console.log(word);
-    return word;
-}
-    
-
- //INVOCAZIONE
- verifyWord(input.length);
-
 // Creo una seconda funzione per verificare il senso di una parola
 
 //DICHIARAZIONE
 
 function verifyReverse(wordReverse){
     
-    for(let i = wordReverse.length -1;  i >= 0 ; i--)
+    let reverseWord = "";
+
     console.log(wordReverse);
-    return wordReverse;
+
+    for(let i = wordReverse.length -1;  i >= 0 ; i--){
+        console.log(wordReverse[i]);
+        reverseWord += wordReverse[i]; 
+    }
+
+    console.log(wordReverse);
+    return reverseWord;
 }
     
 
 //INVOCAZIONE 
-verifyReverse(input.length);
+verifyReverse(input);
 
-    
+let parolaAlContrario = verifyReverse(input);
+console.log(parolaAlContrario)
+
+
+
 //Applico una condizionale che dimostri l'uguaglianza della parola sia normale che al contrario tra le due funzioni 
-if(verifyWord(input.length) === verifyReverse(input.length)){
+if(input === parolaAlContrario){
     alert('la parola è palindroma!');
-}else(
-    alert("la parola e diversa")
-)
-
+}else{
+    alert("la parola e diversa");
+}
 });
+    
