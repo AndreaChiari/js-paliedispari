@@ -36,6 +36,7 @@ if(!isNaN(input)){
 // Creo una seconda funzione per verificare il senso di una parola
 
 //DICHIARAZIONE
+
 function verifyReverse(wordReverse){
     
     for(let i = wordReverse.length -1;  i >= 0 ; i--)
@@ -51,6 +52,8 @@ verifyReverse(input.length);
 //Applico una condizionale che dimostri l'uguaglianza della parola sia normale che al contrario tra le due funzioni 
 if(verifyWord(input.length) === verifyReverse(input.length)){
     alert('la parola è palindroma!');
-}
+}else(
+    alert("la parola e diversa")
+)
 
 });
