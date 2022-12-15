@@ -10,16 +10,27 @@ console.log('JS OK')
 
 // prendo gli elementi dal DOM
 const button = document.getElementById('button')
-console.log(input)
 
 // scelgo pari e dispari tramite un prompt
 const pairUnpair = prompt("pari o dispari?");
-console.log(pairUnpair);
-
 
 // creo un input che forzi a scegliere dei numeri da 1 - 5 
 button.addEventListener("click",function(){
-    const input = input.document.getElementById("input").value
+    const input = document.getElementById("input").value
     console.log(input)
-
+    
+    
+    function randomNumber(){
+        const randomic = Math.floor(Math.random()*5)+1;
+        return randomic;
+    }
+    
+    randomNumber();
+    
+    // sommo i numeri
+    if(isNaN(input)){
+    const sum = (input + randomNumber())  
+    console.log(sum);
+    }
 })
+ 
