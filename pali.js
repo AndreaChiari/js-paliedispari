@@ -51,7 +51,7 @@ console.log(parolaAlContrario)
 if(input === parolaAlContrario){
     alert('la parola è palindroma!');
 }else{
-    alert("la parola e diversa");
+    alert("la parola è diversa");
 }
 });
     
