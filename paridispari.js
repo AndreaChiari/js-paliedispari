@@ -9,21 +9,68 @@ console.log('JS OK')
 */
 
 // prendo gli elementi dal DOM
+const input = document.getElementById('input')
 const button = document.getElementById('button')
+const select = document.getElementById('select')
+const pari = document.getElementById('pari')
+const dispari = document.getElementById('dispari')
 
-// scelgo pari e dispari tramite un prompt
-const pairUnpair = prompt("pari o dispari?");
+// creo un input che forzi a scegliere dei numeri da 1 - 5 e che siano pari o dispari in base alla scelta che ho fatto
+let min = 1
+let max = 5
+const numberPair = (input.value % 2 === 0)
+const numberUnpair = (input.value % 3,5 === 0)
+const number = input.value
 
-// creo un input che forzi a scegliere dei numeri da 1 - 5 
-button.addEventListener("click",function(){
+button.addEventListener('click', function(){
+    if(isNaN(number) || number < min || number > max){
+        alert('devi inserire un numero tra 1 e 5');
+        return;
+    }
+    console.log(number);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*button.addEventListener("click",function(){
     const input = document.getElementById("input").value
     console.log(input)
+    if(input > min && input < max){
+    console.log(input);
+}
+    else(
+        alert('inserire un numero corretto!')
+    )
     
+    function randomNumber(min=1, max=5){
+
+        )
+   
     
-    function randomNumber(){
-        const randomic = Math.floor(Math.random()*5)+1;
-        return randomic;
-    }
     
     randomNumber();
     
@@ -33,4 +80,4 @@ button.addEventListener("click",function(){
     console.log(sum);
     }
 })
- 
+ */
